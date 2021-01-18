@@ -1,0 +1,195 @@
+﻿body {
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	min-width: 500px;
+	min-height: 500px;
+	position: absolute;
+	overflow: auto;
+	box-sizing: border-box;
+    background-color: rgba(0, 96, 185, 0.6);
+    display: flex;
+    flex-flow: column;
+}
+
+#messageBox {
+    flex-shrink: 4;
+    flex-grow: 4;
+	flex-basis: 4%;
+	width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#inputArea {
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 1%;
+    box-sizing: border-box;
+    width: 100%;
+    resize: none;
+	overflow: auto;
+	display: block;
+	background-color: rgb(255, 255, 255);
+}
+
+.user {
+	margin: 0px auto 0px 75px;
+	font-size: 1rem;
+    color: black;
+}
+
+.icon {
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.userMessage {
+    width: auto;
+    position: relative;
+    padding: 15px 0px;
+    overflow-wrap: break-word;
+    flex-direction: column;
+}
+
+.botMessage {
+    width: auto;
+    position: relative;
+    padding: 15px 0px;
+    overflow-wrap: break-word;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.botMessage .messageLevl2 {
+    margin: 0px 60px 0px auto;
+    display: flex;
+}
+
+.userMessage .messageLevl2 {
+    margin: 0px auto 0px 15px;
+    display: flex;
+}
+
+.textBox {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    max-width: 44vw;
+    width: auto;
+    height: 100%;
+    margin: 0px 5px 0px 64px;
+    border-radius: 15px;
+    padding: 7px 9px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+.textBox::after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 99%;
+    border: 10px solid transparent;
+    border-right: 50px solid rgb(255, 255, 255);
+    z-index: -1;
+}
+
+.myTextBox {
+    background-color: rgb(196, 255, 148);
+    position: relative;
+    max-width: 44vw;
+    height: 100%;
+    margin: 0px 0px 0px 5px;
+    border-radius: 15px;
+    padding: 7px 9px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+.myTextBox::after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 99%;
+    border: 10px solid transparent;
+    border-right: 50px solid rgb(196, 255, 148);
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.timeStamp {
+    color: black;
+    font-size: 0.8vw;
+    position: relative;
+    overflow-wrap: normal;
+    width: auto;
+}
+
+.botMessage .messageLevl2 .timeStamp {
+	margin: auto 0px 0px auto;
+}
+
+.userMessage .messageLevl2 .timeStamp {
+    margin: auto auto 0px 0px;
+}
+
+.messageDate {
+    margin: 0px auto;
+    padding:3px 10px;
+    width: fit-content;
+    border-radius: 15px;
+    justify-content: center;
+    color: white;
+    background-color: rgb(7, 58, 124);
+}
+
+#appealingPoint {
+    flex-shrink: 0;
+	width: 100%;
+	height: 4%;
+	text-align: center;
+}
+
+#appealingPoint h2 {
+	font-size: 100%;
+	color: white;
+	margin: 0px;
+}
+
+#appealingText {
+	display: none;
+}
+
+#appealingPoint:hover {
+	display: none;
+}
+
+#appealingText h2 {
+	font-size: 100%;
+	color: white;
+	margin: 0px;
+}
+
+#appealingPoint:hover+#appealingText {
+    flex-shrink: 0;
+	display: block;
+	text-align: center;
+	background-color: darkblue;
+	width: 100%;
+	height: 4%;
+}
+
+#operationSummary {
+    flex-shrink: 0;
+	font-size: 0.8rem;
+	margin: 0px 25px 0px 0px;
+	width: auto;
+	height: auto;
+	text-align: right;
+}
